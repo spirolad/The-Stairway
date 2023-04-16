@@ -1,0 +1,21 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div style="margin-top: 8em;"></div>
+
+  <div class="article-container">
+    <h1 class="article-title"><%= title %></h1>
+    <p class="article-date">Publié le <span class="published-date"><%= date %></span></p>
+    <div class="article-content">
+        <%= content %>
+    </div>
+</div>
+  
+</body>
+  <footer>
+    <%- include("./partials/footer.ejs") %>
+  </footer>
+</html>

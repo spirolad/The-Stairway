@@ -1,0 +1,34 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <div style="margin-top: 8em;"></div>
+
+  <section class="download-section">
+		<h1>Téléchargement de The Stairway</h1>
+		<p>Avant de télécharger le jeu, assurez-vous que votre ordinateur répond aux exigences minimales du système :</p>
+		<ul>
+			<li>Système d'exploitation : Windows 10 (64 bits)</li>
+			<li>Processeur : Intel Core i3 M380</li>
+			<li>RAM : 2 Go</li>
+			<li>Carte graphique : Intel HD 4000</li>
+			<li>Espace disque dur : 1 Go</li>
+		</ul>
+		<p>Si votre ordinateur ne répond pas à ces exigences minimales, le jeu risque de ne pas fonctionner correctement.</p>
+		<div class="download-section-button">
+			<form action="/download/jeu.exe" method="get">
+				<button type="submit">Télécharger</button>
+			</form>
+		</div>
+		<p>Veuillez noter que le téléchargement peut prendre un certain temps en fonction de la vitesse de votre connexion Internet.</p>
+		<p>Si vous rencontrez des problèmes lors du téléchargement ou de l'installation du jeu, veuillez contacter notre service d'assistance à l'adresse e-mail suivante : contact@the-stairway.fr.</p>
+		<p>Nous vous remercions d'avoir choisi The Stairway et espérons que vous apprécierez votre expérience de jeu.</p>
+	</section>
+</body>
+
+<footer>
+	<%- include("./partials/footer.ejs") %>
+</footer>
+</html>

@@ -1,0 +1,50 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <p>5 étoiles, le jeu est parfait</p>
+
+  <div style="margin-top: 8em;"></div>
+
+    <% comments.forEach(comment => { %>
+      <div class="comment">
+        <h3><%= comment.name %> <span class="rating"><%= comment.grade%>/5</span></h3>
+        <p><%= comment.comment %></p>
+      </div>      
+    <%}); %>
+
+  <section id="feedback">
+    <h2>Laissez-nous votre avis !</h2>
+    <form action="/feedback" method="POST">
+      <div>
+        <label for="name">Votre nom :</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="rating">Votre note :</label>
+        <select id="rating" name="rating" required>
+          <option value="" disabled selected>Choisissez une note</option>
+          <option value="1">1 étoile</option>
+          <option value="2">2 étoiles</option>
+          <option value="3">3 étoiles</option>
+          <option value="4">4 étoiles</option>
+          <option value="5">5 étoiles</option>
+        </select>
+      </div>
+      <div>
+        <label for="comment">Votre commentaire :</label>
+        <textarea id="comment" name="comment" required></textarea>
+      </div>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+</body>
+
+<footer>  
+  <%- include("./partials/footer.ejs") %>
+</footer>
+
+</html>

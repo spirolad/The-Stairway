@@ -1,0 +1,50 @@
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+    
+    <body>
+      <%- include("./partials/nav.ejs") %>
+
+      <div style="margin-top: 8em;"></div>
+
+      <div class="download-card">
+        <h3 class="download-card__title">Conception du projet</h3>
+        <p class="download-card__description">Cette section contient les documents essentiels à la conception du projet</p>
+        <div class="download-card__files">
+          <a href="/download/Sujet-projet-S2-EPITA-2027.pdf" class="download-card__file-link" download target="_blank">Sujet-projet-S2-EPITA-2027.pdf</a>
+          <a href="/download/Cahier-des-charges-gr14-Apotheos.pdf" class="download-card__file-link" download>Cahier-des-charges-gr14-Apotheos.pdf</a>
+        </div>  
+      </div>
+
+      <div class="download-card">
+        <h3 class="download-card__title">Documents de soutenance</h3>
+        <p class="download-card__description">Cette rubrique est composée des documents utilisés en soutenance</p>
+        <div class="download-card__files">
+          <a href="/download/Sujet-projet-S2-EPITA-2027.pdf" class="download-card__file-link" download target="_blank">rapport-de-soutenance-S1.pdf</a>
+          <a href="https://docs.google.com/presentation/d/1NfraCzOKCkqJubcWjELydwjtRpIWlU9zynbt211rfuk/edit?usp=sharing" target="_blank" class="download-card__file-link">diapositive-soutenance-S1.pdf</a>
+        </div>  
+      </div>  
+
+      <div class="download-card">
+        <h3 class="download-card__title">Dossier d'exploitation</h3>
+        <p class="download-card__description">Regroupe les documents relatifs à l'exploitation du jeu</p>
+        <div class="download-card__files">
+          <a href="/download/" class="download-card__file-link">manuel-installation-The-Stairway.pdf</a>
+          <a href="/download/" class="download-card__file-link">manuel-de-désinstallation-The-Stairway.pdf</a>
+          <a href="/download/" class="download-card__file-link">manuel-d-utilisation-The-Stairway.pdf</a>
+        </div>
+      </div>
+
+      <div class="download-card">
+        <h3 class="download-card__title">Sources du projet</h3>
+        <p class="download-card__description">Contient les documents de source extérieur à l'équipe pour le projet</p>
+        <div class="download-card__files">
+          <a href="/download/Sujet-projet-S2-EPITA-2027.pdf" class="download-card__file-link" download>personnage.pdf</a>
+          <a href="/download/Cahier-des-charges-gr14-Apotheos.pdf" class="download-card__file-link" download>on-verra-plus-tard.pdf</a>
+        </div>  
+      </div>
+
+    </body>
+    <footer>
+      <%- include("./partials/footer.ejs") %>      
+    </footer>
+</html>

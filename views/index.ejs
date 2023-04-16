@@ -1,0 +1,189 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+  <%- include("./partials/nav.ejs") %>
+
+  <section class="presentation" style="margin-top: 10em;">
+    <div class="text-content">
+      <h2>Présentation</h2>
+      <p><b>The Stairway</b> est un jeu qui a été développé dans le cadre d'un projet scolaire à l'EPITA. C'est ainsi un <b>Roguelike</b> qui a été choisi
+         dans lequel le joueur incarne une des trois classes disponible afin d'accomplir sa propre <b>Apotheose</b>.
+      </p>
+    </div>
+    <div class="media-content">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/zb3Qk8SG5Ms" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <div class="separator">
+    <hr>
+  </div>
+  
+  <section class="presentation">
+    <div class="media-content">
+      <img width="560" height="315" src="/images/gamePreview.png">
+    </div>
+    <div class="text-content">
+      <h2>Un long chemin</h2>
+      <p>Tout Dieu a commencé à partir de rien. Vous commencerez à la surface qui sera à votre début vide mais qui se développera au fur et à mesure de votre 
+        aventure. Vous devrez parcourir les donjons afin d'obtenir des ressources pour accroitre votre puissance.
+      </p>
+    </div>
+  </section>
+
+  <div class="separator">
+    <hr>
+  </div>
+
+  <section class="presentation">
+    <div class="text-content">
+      <h2>Des donjons uniques</h2>
+      <p>Chaque donjons sera une épreuve pour le joueur. Les donjons comportent 50 étages générés aléatoirement que vous devrez vider de ses monstres qui n'auront
+        qu'une seule volonté: vous empêcher de devenir un Dieu.
+      </p>
+    </div>
+    <div class="media-content">
+      <img width="560" height="315" src="/images/donjon.png">
+    </div>
+  </section>
+
+  <div class="separator">
+    <hr>
+  </div>
+
+  <section class="presentation">
+    <div class="media-content">
+      <img width="560" height="315" src="/images/surface.png">
+    </div>
+    <div class="text-content">
+      <h2>Une terre a développé</h2>
+      <p>La surface se développera grâce aux ressources que vous aurez amassées pendant vos passages dans les donjons. Celle-ci se développera en fonction de votre 
+        classe et sera un atout capital dans votre quête d'Apothéose.
+      </p>
+    </div>
+  </section>
+
+  <div class="separator">
+    <hr>
+  </div>
+
+  <section class="presentation">
+    <div class="text-content">
+      <h2>Un multijoueur riche</h2>
+      <p>Une fois devenu un dieu, il faudra faire vos preuves parmi les autres ayant réussi leurs Apothéose. Combattez, échangez, coopérez ou battez avec eux 
+        afin d'affirmer votre place jusqu'à peut-être devenir le plus puissant d'entre eux.
+      </p>
+    </div>
+    <div class="media-content">
+      <img width="560" height="315" src="/images/multiplayer.jpg">
+    </div>
+  </section>
+
+  <div class="separator">
+    <hr>
+  </div>
+
+  <section class="presentation">
+    <div class="media-content">
+      <img width="560" height="315" src="/images/skill-tree.png">
+    </div>
+    <div class="text-content">
+      <h2>Une progression récompensante</h2>
+      <p>Pour accomplir votre quête, vous aurez de nombreux outils permettant de devenir plus puissant. Un arbre de compétence permettra en fonction de votre 
+        race d'apporter de nouvelles capacités qui seront des mécaniques à part entières.
+      </p>
+    </div>
+  </section>
+
+  <div class="separator">
+    <hr>
+  </div>
+
+  <section class="presentation">
+    <div class="text-content">
+      <h2>Un système d'objet complexe</h2>
+      <p>Pour devenir un Dieu, il vous faudra être bien équipé. Il vous faudra acquérir des équipements de plus en plus puissant en utilisant le système d'objet 
+        du jeu qui vous poussera à optimiser au maximum votre équipement. Après tout, un Dieu se doit d'avoir les objets les plus puissants pour affirmer sa domination.
+      </p>
+    </div>
+    <div class="media-content">
+      <img width="560" height="315" src="/images/item.jpg">
+    </div>
+  </section>
+
+  <div class="separator">
+    <hr>
+  </div>
+
+  <section class="presentation">
+    <div class="media-content">
+      <img width="560" height="315" src="/images/boss.png">
+    </div>
+    <div class="text-content">
+      <h2>De puissants boss</h2>
+      <p>Avant de devenir un dieu, il vous faudra affronter de nombreux puissants boss qui vous feront barrage. Ces combats vous mettront à l'épreuve mais se seront
+        des étapes indispensables de votre quête pour devenir un dieu.
+      </p>
+    </div>
+  </section>
+
+  <div class="separator">
+    <hr>
+  </div>
+
+  <script>
+    function textHuman() {
+      document.getElementById('text').innerHTML = "La force des humains a toujours été la quête de <b>technologie</b>. Ainsi, cette race vous conduira à vous développer"
+      + " de façon à ce que vous parveniez à <b>l'industrialisation</b> de votre monde. Les humains ne sont peut-être pas aussi fort que d'autres races mais leurs " +
+      " forces résident dans leur <b>intelligence</b>. Vous devrez donc optimiser vos <b>savoirs</b> et vos <b>équipements</b> afin de monter en puissance jusqu'à parvenir à celle des" +
+      " <b>dieux</b>";
+      document.getElementById("image-breed").src="/images/human.png";
+      document.getElementById("title-breed").innerHTML = "La race Humaine";
+    }
+    function textArcanes(){
+      document.getElementById('text').innerHTML = "Cette race comporte une légende disant que celui qui possédera la <b>pierre philosophale</b> devindra un Dieu."
+      + " Vous devrez ainsi vous lancer dans la quête de la fabriquer en augmentant votre <b>puissance magique</b> afin de réunir l'ensemble des éléments permettant sa fabrication. "
+      + "Même si les arcanes sont physiquements très faible, ils sont connus pour être la race la <b>plus abile avec la magie</b>. Releverez vous donc le défis de d'accomplir" 
+      + " cette légende pour devenir un <b>dieu</b> ?";
+      document.getElementById("image-breed").src="/images/arcane.png";
+      document.getElementById("title-breed").innerHTML = "La race des Arcanes";
+    }
+    function textEldritch(){
+      document.getElementById('text').innerHTML = "Les Eldritchs ne possèdent qu'un seul souhait: devenir plus puissant. Pour cela, il n'hésite pas à terrasser "
+      + "les autres créatures qui se dressent devant elle afin d'aspirer leur compétence et devenir une aberration. Vous devrez donc décimer les donjons afin de vous améliorer"
+      + " jusqu'à atteindre une forme de divinité grâce aux âmes des créatures que vous aurez tuées. Bien que les Eldritchs soient d'une force immense, leur grand" 
+      + " point faible réside dans leurs faibles intelligences qui peuvent les handicaper.";
+      document.getElementById("image-breed").src="/images/eldritch.png";
+      document.getElementById("title-breed").innerHTML = "La race des Eldritch";
+    }
+  </script>
+  
+  <div style="margin: 0 auto;">
+    <h1 id="title-breed">La race Humaine</h1>
+  </div>
+
+  <div class="wrapper" style="margin-bottom: 20rem;">
+    <div class="container">
+      <div class="buttons">
+        <button class="pixel-button" onclick="textHuman()">Humain</button>
+        <button class="pixel-button" onclick="textArcanes()">Arcanes</button>
+        <button class="pixel-button" onclick="textEldritch()">Eldritch</button>
+      </div>
+      <div class="content" id="text">
+        La force des humains a toujours été la quête de <b>technologie</b>. Ainsi, cette race vous conduira à vous développer de façon à ce que vous parveniez à <b>l'industrialisation</b> de votre monde. Les humains ne sont peut-être pas aussi fort que d'autres races mais leurs
+        forces résident dans leur <b>intelligence</b>. Vous devrez donc optimiser vos savoirs et vos équipements afin de monter en puissance jusqu'à parvenir à celle des <b>dieux</b>     
+      </div>
+      <div class="image-breed">
+        <img src="/images/human.png" height="100" id="image-breed">
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<footer>
+  <%- include("./partials/footer.ejs") %>
+</footer>
+
+</html>

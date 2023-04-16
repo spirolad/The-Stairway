@@ -1,0 +1,585 @@
+body {
+  background-color: #1a1a1a;
+  color: #c9c8c8;
+  font-family: "Pixel Operator", monospace;
+}
+
+.separator {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 70px; 
+  margin-bottom: 70px;
+}
+
+/* Menu de navigation */
+
+nav {
+  background-color: #00025c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  top: 0;
+  position: fixed;
+  left: 50%;
+  right: 50%;
+  height: 90px;
+  transform: translateX(-50%);
+  z-index: 999; 
+}
+
+.logo {
+  text-align: center;
+  margin: 0 auto;
+}
+    
+.logo a img {
+  height: 75px;
+  width: 200px;
+
+}
+    
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-left {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+    
+.menu li {
+  margin: 0 20px;
+}
+
+.menu-left li {
+  margin: 0 20px;
+}
+    
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 30px;
+  border-radius: 5px;
+  background-color: #808080;
+  transition: background-color 0.3s ease;
+}
+
+.menu-left li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 30px;
+  border-radius: 5px;
+  background-color: #808080;
+  transition: background-color 0.3s ease;
+}
+    
+.menu li a:hover {
+  background-color: #4d4d4d;
+}
+
+.menu-left li a:hover {
+  background-color: #4d4d4d;
+}
+    
+.download a {
+  background-color: #e60000;
+  color: #fff;
+  text-shadow: 1px 1px #000;
+  box-shadow: 2px 2px #000;
+  transition: background-color 0.3s ease;
+}
+    
+.download a:hover {
+  background-color: #ff1a1a;
+}
+
+/* CSS pour le footer */
+
+footer {
+  padding: 40px;
+  font-size: 14px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-column {
+  width: calc(33.33% - 20px);
+  margin-bottom: 40px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li a {
+  color: #666;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  color: #333;
+}
+
+.footer-column p {
+  margin-bottom: 20px;
+}
+
+.footer-copyright {
+  text-align: center;
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+/* Partie pour les informations de présentations */
+
+.presentation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+    
+.text-content {
+  flex: 1;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Pixel Operator", monospace;
+  font-weight:normal;
+  font-style:normal;
+}
+    
+.media-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Code CSS pour l'affichage des personnages */
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  margin-top: 120px;
+}
+
+.container {
+  display: flex;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-right: 60px;
+}
+
+.pixel-button {
+  background-color: #808080;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 32px;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 1px 1px #FFD88C;
+  transition: all 0.1s ease-in-out;
+}
+
+.pixel-button:hover {
+  background-color: #4d4d4d;
+  cursor: pointer;
+}
+
+button {
+  margin-bottom: 20px;
+}
+
+.content {
+  flex: 1;
+  width: 650px;
+  font-size: 20px;
+  font-family: "Pixel Operator", monospace;
+  font-weight:normal;
+  font-style:normal;
+  text-align: center;
+}
+
+.image-breed{
+  margin-left: 60px;
+}
+
+/* Cartes des membres */
+
+/* Mise en forme générale de la carte */
+.member-card {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 50%;
+}
+
+/* Mise en forme de la photo du membre */
+.member-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+/* Mise en forme des informations du membre */
+.member-info {
+  flex-grow: 1;
+}
+
+.member-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.member-info p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Mise en forme des icônes de réseaux sociaux */
+.social-media {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-media img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+/* Code CSS pour les cartes de la documentation */
+
+.download-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  margin: 15px auto;
+  width: 500px;
+}
+
+.download-card__title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.download-card__description {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+}
+
+.download-card__files {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.download-card__file-link {
+  margin-bottom: 5px;
+  color: #fff;
+  background-color: #1a1a1a;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Code CSS de la page de téléchargement */
+
+.download-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  color: #fff;
+  align-items: center;
+  display: grid;
+}
+
+.download-section h1 {
+  font-size: 36px;
+  margin: 20 auto;
+}
+
+.download-section ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.download-section-button{
+  margin: 20 auto;
+}
+
+.download-section button {
+  background-color: #4CAF50;
+  padding: 30px 60px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 26px;
+}
+
+.download-section button:hover {
+  background-color: #3e8e41;
+}
+
+/* Code CSS de la page about */
+
+.content-table {
+  position: fixed;
+  margin-left: 5em;
+}
+
+.about-section {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.about-section h1{
+  font-size: 32px;
+}
+
+.about-section h2 {
+  font-size: 26px;
+}
+
+.about-section p {
+  text-indent: 40px;
+}
+
+.subtitle-content {
+  text-indent: 15px;
+}
+
+/* Code CSS de la page Feedback */
+
+#feedback {
+  padding: 50px;
+}
+
+#feedback h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#feedback form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#feedback label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#feedback input[type="text"],
+#feedback select,
+#feedback textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+label[for="comment"] {
+  display: block;
+  position: relative;
+}
+
+#feedback input[type="text"],
+#feedback select {
+  width: 100%;
+}
+
+#feedback textarea {
+  resize: vertical;
+  height: 150px;
+  width: 100%;
+}
+
+#feedback button[type="submit"] {
+  padding: 10px;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#feedback button[type="submit"]:hover {
+  background-color: #444;
+}
+
+.comment {
+  max-width: 40%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  border: 1px solid #ffffff;
+}
+
+.comment h3 {
+  margin: 0;
+}
+
+.comment p {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.comment .rating {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 24px;
+  color: #ffd700;
+}
+
+/* Code CSS de la page newsletter */
+
+.newsletter {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.newsletter .article {
+  width: calc(33.33% - 10px);
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.newsletter .article img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.newsletter .article .title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.newsletter .article .description {
+  font-size: 14px;
+  margin: 0 auto;
+}
+
+/* Page css article */ 
+
+.article-container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #c9c8c8;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.article-title {
+	font-size: 28px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.article-author {
+	font-size: 14px;
+	margin-bottom: 10px;
+	color: #999;
+}
+
+.author-name {
+	color: #666;
+}
+
+.article-date {
+	font-size: 12px;
+	color: #999;
+}
+
+.published-date {
+	color: #666;
+}
+
+.article-content {
+	font-size: 16px;
+	line-height: 1.5;
+	margin-top: 20px;
+	color: #666;
+}
+
