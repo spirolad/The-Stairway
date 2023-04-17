@@ -8,12 +8,15 @@
 
   <div style="margin-top: 8em;"></div>
 
+  <% if(comments.length >= 1){ %>
+    <p style="text-align: center; font-size: 2em;">Note moyenne: <%= mean %>/5</p>
     <% comments.forEach(comment => { %>
       <div class="comment">
         <h3><%= comment.name %> <span class="rating"><%= comment.grade%>/5</span></h3>
         <p><%= comment.comment %></p>
       </div>      
     <%}); %>
+  <% } %>
 
   <section id="feedback">
     <h2>Laissez-nous votre avis !</h2>

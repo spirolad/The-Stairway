@@ -15,7 +15,7 @@ body {
 /* Menu de navigation */
 
 nav {
-  background-color: #00025c;
+  background-color: #444444;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,6 +28,7 @@ nav {
   height: 90px;
   transform: translateX(-50%);
   z-index: 999; 
+  box-shadow: 2px 2px #000; 
 }
 
 .logo {
@@ -38,7 +39,6 @@ nav {
 .logo a img {
   height: 75px;
   width: 200px;
-
 }
     
 .menu {
@@ -64,55 +64,38 @@ nav {
   top: 50%;
   transform: translateY(-50%);
 }
-    
+
 .menu li {
-  margin: 0 20px;
+  margin: 0 25px;
 }
 
 .menu-left li {
-  margin: 0 20px;
+  margin: 0 25px;
 }
     
 .menu li a {
-  color: #fff;
+  color: #c9c8c8;
   text-decoration: none;
+  font-size: 28px;
   font-weight: bold;
-  font-size: 18px;
-  padding: 15px 30px;
-  border-radius: 5px;
-  background-color: #808080;
-  transition: background-color 0.3s ease;
+  text-transform: uppercase;
 }
 
 .menu-left li a {
-  color: #fff;
+  color: #c9c8c8;
   text-decoration: none;
+  font-size: 28px;
   font-weight: bold;
-  font-size: 18px;
-  padding: 15px 30px;
-  border-radius: 5px;
-  background-color: #808080;
-  transition: background-color 0.3s ease;
+  text-transform: uppercase;
 }
     
 .menu li a:hover {
-  background-color: #4d4d4d;
+  color: #5d5d5d;
+  transition: 0,3s;
 }
 
 .menu-left li a:hover {
-  background-color: #4d4d4d;
-}
-    
-.download a {
-  background-color: #e60000;
-  color: #fff;
-  text-shadow: 1px 1px #000;
-  box-shadow: 2px 2px #000;
-  transition: background-color 0.3s ease;
-}
-    
-.download a:hover {
-  background-color: #ff1a1a;
+  color: #5d5d5d;
 }
 
 /* CSS pour le footer */
@@ -393,7 +376,7 @@ button {
 
 .content-table {
   position: fixed;
-  margin-left: 5em;
+  margin-left: 2.5em;
 }
 
 .about-section {

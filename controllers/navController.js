@@ -18,15 +18,22 @@ const page_download = (req, res) => {
 
 const page_feedback = (req, res) => {
     mysql.get_feedback((result) => {
-        res.render('feedback', {title: 'Feedback', comments: result});
+        mysql.compute_mean((mean) => {
+            res.render('feedback', {title: 'Feedback', comments: result, mean: mean});
+        })
     });
 };
 
 const page_feedback_create = (req, res) => {
-    mysql.create_feedback(req.body.name, req.body.rating, req.body.comment);
-    mysql.get_feedback((result) => {
-        res.render('feedback', {title: 'Feedback', comments: result});
-    });
+    let rate = req.body.rating;
+    let comment = req.body.comment;
+    let name = req.body.name;
+    if(rate > 5 || rate < 1 || comment == "" || name == ""){
+        res.render('404');
+    } else {
+        mysql.create_feedback(name, rate, comment);
+        res.redirect('/feedback');
+    }
 }
 
 const page_member = (req, res) => {
@@ -53,7 +60,6 @@ const page_letter = (req, res) => {
 
 const page_article = (req, res) => {
     const id  = req.params.id;
-    console.log(id);
     mysql.get_article(id, (result) => {
         if(result.length <= 0){
             res.render('404', {title: 'Page not found'})
