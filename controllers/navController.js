@@ -1,3 +1,4 @@
+const { response } = require("express");
 const mysql = require("../SqlManager");
 
 const page_index = (req, res) => {
@@ -25,19 +26,41 @@ const page_feedback = (req, res) => {
 };
 
 const page_feedback_create = (req, res) => {
-    let rate = req.body.rating;
-    let comment = req.body.comment;
-    let name = req.body.name;
-    if(rate > 5 || rate < 1 || comment == "" || name == ""){
-        res.render('404');
-    } else {
-        mysql.create_feedback(name, rate, comment);
-        res.redirect('/feedback');
-    }
+    const rp = require('request-promise');
+
+    const secret_key = '6LeUVqIlAAAAAIGFslDOcRqx5IiECYdshyFyRT-R';
+    const recaptcha_response = req.body['g-recaptcha-response'];
+    const options = {
+    method: 'POST',
+    uri: 'https://www.google.com/recaptcha/api/siteverify',
+    form: {
+        secret: secret_key,
+        response: recaptcha_response,
+    },
+    json: true,
+    };
+    
+    rp(options).then((response) => {
+        if(response.success){
+            let rate = req.body.rating;
+            let comment = req.body.comment;
+            let name = req.body.name;
+            if(rate > 5 || rate < 1 || comment == "" || name == ""){
+                res.render('404');
+            } else {
+                mysql.create_feedback(name, rate, comment);
+                res.redirect('/feedback');
+            }
+        } else {
+            res.redirect('feedback');
+        }
+    }).catch((err) => {
+        res.render('404')
+    })
 }
 
 const page_member = (req, res) => {
-    res.render('member', {title: 'Member'})
+    res.render('member', {title: 'Members'})
 }
 
 const page_cgu = (req, res) => {

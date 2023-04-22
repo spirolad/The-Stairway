@@ -8,6 +8,8 @@
 
   <div style="margin-top: 8em;"></div>
 
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+
   <% if(comments.length >= 1){ %>
     <p style="text-align: center; font-size: 2em;">Note moyenne: <%= mean %>/5</p>
     <% comments.forEach(comment => { %>
@@ -40,10 +42,13 @@
         <label for="comment">Votre commentaire :</label>
         <textarea id="comment" name="comment" required></textarea>
       </div>
+      <div class="recaptcha-container">
+        <div class="g-recaptcha" data-sitekey="6LeUVqIlAAAAALebM-lvTCs-9n5v4de6SRxpIlLL"></div>
+      </div>
+      <br>
       <button type="submit">Envoyer</button>
     </form>
   </section>
-
 </body>
 
 <footer>  

@@ -43,11 +43,27 @@
     </div>
   </div>
 
+  <script>
+    let isGauthier = true;
+    function secretMember(){
+      if(isGauthier){
+        document.getElementById('gauthier').src = "/images/members/nicolas.jpg"
+        document.getElementById('secretName').innerHTML = "Nicolas Celik"
+        document.getElementById('secretText').innerHTML = "Membre secret du projet, a beaucoup contribué"
+      } else {
+        document.getElementById('gauthier').src = "/images/members/gauthier.jpg"
+        document.getElementById('secretName').innerHTML = "Gauthier Baur"
+        document.getElementById('secretText').innerHTML = "Graphiste du projet"
+      }
+      isGauthier = !isGauthier;
+    }
+  </script>
+
   <div class="member-card">
-    <img class="member-photo" src="images/members/gauthier.jpg" alt="Photo du membre">
+    <img onclick="secretMember()" class="member-photo" id="gauthier" src="images/members/gauthier.jpg" alt="Photo du membre">
     <div class="member-info">
-      <h3>Gauthier Baur</h3>
-      <p>Graphiste du projet, il a été un monstre en modélisation
+      <h3 id="secretName">Gauthier Baur</h3>
+      <p id="secretText">Graphiste du projet
       </p>
       <div class="social-media">
         <a href="https://github.com/spirolad" target="_blank"><img src="/images/socialNetwork/github.png" alt="github"></a>

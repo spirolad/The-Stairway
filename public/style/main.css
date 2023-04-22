@@ -490,6 +490,17 @@ label[for="comment"] {
   color: #ffd700;
 }
 
+.recaptcha-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.g-recaptcha {
+  width: 300px; /* ajustez la largeur selon vos besoins */
+  text-align: center;
+}
+
 /* Code CSS de la page newsletter */
 
 .newsletter {
@@ -565,4 +576,3 @@ label[for="comment"] {
 	margin-top: 20px;
 	color: #666;
 }
-

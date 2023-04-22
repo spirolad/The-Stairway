@@ -4,7 +4,7 @@ const controller = require('../controllers/navController');
 const router = express.Router();
 
 router.get('/', controller.page_index);
-router.get('/member', controller.page_member);
+router.get('/members', controller.page_member);
 router.get('/about', controller.page_about);
 router.get('/documentation', controller.page_doc);
 router.get('/download', controller.page_download);
